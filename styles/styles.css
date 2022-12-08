@@ -143,35 +143,48 @@ header img {
 
 h2 {
     color: #369f39;
-    padding-left: 15px;
+    text-align: left;
 
 }
-article {
+form {
     max-width: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    gap: 10px;
     
 }
-article div {
+form div {
     border: 3px solid #369f39;
-    margin: 10px;
-    justify-items: auto;
+    max-width: 50%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    gap: 5px;
+    align-items: center;
+    
 
 }
-article h4 {
+form h4 {
     background-color: #369f39;
     padding: 5px;
+    
 }
 
 label {
     background-color: #369f39;
     padding: 5px;
+
+}
+
+input {
+    width:20%;
 }
 button {
     background-color: #369f39;
 }
-article img {
-    width: 20vh;
+form img {
+    max-width: 100%;
+
 
 }
