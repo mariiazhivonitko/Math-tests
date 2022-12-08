@@ -76,7 +76,9 @@ nav li>div { /* Visa valinta muotoilu*/
     height: 4.5em; 
     border-radius: 3px; 
 }
-
+#answers {
+    display: none;
+}
 
 
 nav li>div:hover {  /*visa valinta napit vaihtavat väriä kun käyttäjä vie hiiren niiden yli*/
