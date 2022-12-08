@@ -17,7 +17,7 @@ ul {
 
 #container { 
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 2fr 2fr;
     grid-template-rows: auto auto 12vh;
     background-color: #fff;
 }
@@ -147,16 +147,18 @@ h2 {
 
 }
 form {
-    max-width: 100vh;
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 10px;
-    
+    background-color: #a05c9d;
+
+
 }
 form div {
     border: 3px solid #369f39;
-    max-width: 50%;
+    max-width: 45%;
     display: flex;
     flex-wrap:wrap;
     justify-content:space-around;
