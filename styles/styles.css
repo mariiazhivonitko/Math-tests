@@ -113,24 +113,6 @@ footer { /* Footerin muotoilu alkaa */
     margin-right: 55px;
 }
 
-
-#carouselExampleFade{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    background-color: #6bd06e;
-
-}
-.carousel-item {
-    display: flex;
-}
-
-.carousel-item img {
-    
-    width: 100vh;/* auto !important;*/
-    max-height: 140vh;
-    min-height: 100vh;
-    /* max-height: 400px !important; */
-}
 header img {
     height: 100px;
 }
