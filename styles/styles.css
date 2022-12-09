@@ -4,6 +4,7 @@ body {
     font-family: 'Patrick Hand', cursive;
     text-shadow: 0px 0px 3px #000;
     color: #fff;
+    
 }
 
 * {
@@ -18,12 +19,12 @@ ul {
 #container { 
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: auto auto 12vh;
+    grid-template-rows: auto auto auto 12vh;
     background-color: #fff;
 }
 
 header { /* Headerin muotoilu alkaa */
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row: 1/2;
     display: flex;
     align-items: center;
@@ -47,7 +48,7 @@ header, footer { /* Tasainen padding headerin ja footerin välille */
 
 nav { /* Navigoinnin muotoilu alkaa */
     grid-column: 1/2;
-    grid-row: 2/3;
+    grid-row: 2/4;
     list-style: none;
     background-color: #6bd06e;
 }
@@ -76,9 +77,7 @@ nav li>div { /* Visa valinta muotoilu*/
     height: 4.5em; 
     border-radius: 3px; 
 }
-#answers {
-    display: none;
-}
+
 
 
 nav li>div:hover {  /*visa valinta napit vaihtavat väriä kun käyttäjä vie hiiren niiden yli*/
@@ -93,8 +92,8 @@ nav li>div:hover {  /*visa valinta napit vaihtavat väriä kun käyttäjä vie h
 }
 
 footer { /* Footerin muotoilu alkaa */
-    grid-column: 1/3;
-    grid-row: 3/4;
+    grid-column: 1/4;
+    grid-row: 4/5;
 
     display: flex;
     align-items: center;
@@ -102,6 +101,7 @@ footer { /* Footerin muotoilu alkaa */
 
     min-height: 50px; /* Väliaikainen arvo */
 }
+
 
 .fa-solid, .fa-regular, .fa-light, .fa-thin{ /* FontAwesome ikonit */
     font-family: 'FontAwesome';
@@ -116,20 +116,17 @@ footer { /* Footerin muotoilu alkaa */
 header img {
     height: 100px;
 }
-.carousel-caption h5 {
-    font-size: 4em;
-    
-    
-}
-.carousel-caption p{
-    font-size: 1.5em;
-}
 
-h2 {
+/*h2 {
+    grid-column: 2/4;
+    grid-row: 2/3;
     color: #369f39;
     text-align: left;
 
 }
+#question1 {
+    grid-column: 2/3;
+}*/
 form {
 
     display: flex;
@@ -173,4 +170,7 @@ form img {
     max-width: 100%;
 
 
+}
+#answers {
+    display: none;
 }
