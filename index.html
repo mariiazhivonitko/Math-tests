@@ -84,11 +84,19 @@
             <div id="question1">
                 <h4>Kysymys 1</h4>
                 <img src="assets/tasks/flowers.svg" alt="flowers">
+                
+                <label for="answer1">Vastaus</label>
+                <input type="number" name="answer1" id="answer1">
+                <button id="check1" onclick="checkAnswer1()">Tarkista</button>
+                    <!--</div>
                 <div class="answer-box">
-                    <label for="answer1">Vastaus</label>
-                    <input type="number" name="answer1" id="answer1">
+                    <div>
+                        <label for="answer1">Vastaus</label>
+                        <input type="number" name="answer1" id="answer1">
+                    </div>
+                    
                     <button id="check1" onclick="checkAnswer1()">Tarkista</button>
-                </div>
+                </div>-->
                 
             </div>
             <div id="question2">
@@ -114,7 +122,7 @@
                     </div>
                     
                     
-                <button type="submit">Tarkista</button>
+                    <button type="submit">Tarkista</button>
                 </div>
             </div>
             <div id="question3">
@@ -127,16 +135,28 @@
             <div id="question4">
                 <h4>Kysymys 4</h4>
                 <img src="assets/tasks/tetris.svg" alt="tetris">
-                <label>Vastaus</label>
-                <input type="radio" id="tetrisA" name="tetris" value="A">
-                <label for="tetrisA">A</label>
-                <input type="radio" id="tetrisB" name="tetris" value="B">
-                <label for="tetrisB">B</label>
-                <input type="radio" id="tetrisC" name="tetris" value="C">
-                <label for="tetris">C</label>
-                <input type="radio" id="tetrisD" name="tetris" value="D">
-                <label for="tetris">D</label>
-                <button type="submit">Tarkista</button>
+                <div class="answer-box">
+                    <label>Vastaus</label>
+                    <div>
+                        <input type="radio" id="tetrisA" name="tetris" value="A">
+                        <label for="tetrisA">A</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="tetrisB" name="tetris" value="B">
+                        <label for="tetrisB">B</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="tetrisC" name="tetris" value="C">
+                        <label for="tetris">C</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="tetrisD" name="tetris" value="D">
+                        <label for="tetris">D</label>
+                    </div>
+                    
+                    
+                    <button type="submit">Tarkista</button>
+                </div>
             </div>
             <div id="question5">
                 <h4>Kysymys 5</h4>

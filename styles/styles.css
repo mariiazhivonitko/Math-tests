@@ -144,7 +144,14 @@ h2 {
 
 #form .answer-box {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-around;
+    border: none;
+}
+
+#form .answer-box div {
+    border: none;
 }
 
 #form div #question5 {
@@ -162,8 +169,11 @@ h2 {
 }
 
 label {
-    background-color: #369f39;
+    color: #369f39;
     padding: 5px;
+    text-shadow: none;
+    font-weight: bold;
+
 
 }
 
