@@ -152,6 +152,7 @@ h2 {
 
 #form .answer-box div {
     border: none;
+    margin: 5px;
 }
 
 #form div #question5 {
@@ -183,6 +184,8 @@ input {
 button {
     background-color: #369f39;
     color: #fff;
+    margin: 5px;
+    border: none;
     
 }
 #form img {

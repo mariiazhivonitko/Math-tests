@@ -250,7 +250,7 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="1"
-     inkscape:cx="640"
+     inkscape:cx="641"
      inkscape:cy="454"
      inkscape:window-width="1920"
      inkscape:window-height="974"
@@ -346,21 +346,22 @@
     <text
        xml:space="preserve"
        transform="scale(1,-1)"
-       style="font-variant:normal;font-weight:600;font-stretch:normal;font-size:72px;font-family:'Myriad Pro Light';-inkscape-font-specification:MyriadPro-Semibold;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:600;font-stretch:normal;font-size:72px;font-family:'Myriad Pro Light';-inkscape-font-specification:MyriadPro-Semibold;writing-mode:lr-tb;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="text790"
-       x="722.2804"
-       y="-86.276894"><tspan
+       x="729.7804"
+       y="-87.776894"><tspan
          sodipodi:role="line"
          id="tspan7750"
-         x="722.2804"
-         y="-86.276894"><tspan
-           x="722.2804"
-           y="-86.276894"
-           id="tspan788">11</tspan></tspan><tspan
+         x="729.7804"
+         y="-87.776894"><tspan
+           x="729.7804"
+           y="-87.776894"
+           id="tspan788"
+           style="fill:#ff0000">11</tspan></tspan><tspan
          sodipodi:role="line"
          id="tspan7752"
-         x="722.2804"
-         y="3.7231061" /></text>
+         x="729.7804"
+         y="2.2231064" /></text>
     <text
        xml:space="preserve"
        transform="matrix(1,0,0,-1,728.5843,223.105)"
