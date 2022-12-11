@@ -7,6 +7,6 @@ function checkAnswer1() {
     if(answerInput1 == 11){
         console.log(answerInput1);
     }else{
-        console.log("wrong");
+        ;
     }
 }
