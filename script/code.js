@@ -20,20 +20,35 @@
 
 /**
  * 
- * Returns comment for right answer
+ * Make changes for the case-right answer.
  */
-function rightAnswer() {
+function rightAnswer(element) {
     let comment = document.createElement("p");
     let bonus = document.createElement("img");
     comment.textContent = "Mahtava! Vasaus on oikein. Saat";
     comment.style.color = "#369f39";
     comment.style.fontSize = "2em";
+    element.append(comment);
 
     //Add bonus star-picture
-    //bonus.style.scr = "assets/answers/Star.svg";
-    return comment;
+    bonus.style.scr = "assets/answers/Star.svg";
+    question1.append(bonus);
 }
 
+/**
+ * 
+ * Make changes for the case-wrong answer.
+ */
+ function wrongAnswer(element, wrongAnswer) {
+    let comment = document.createElement("p");
+
+    element.style.borderColor = "red";
+    
+    comment.textContent = "Vastaus " + wrongAnswer + " on väärä. Oikein vastaus on 11.";
+    comment.style.color = "red";
+    comment.style.fontSize = "2em";
+    element.append(comment);
+}
 
 
 function checkAnswer1() {
@@ -41,8 +56,7 @@ function checkAnswer1() {
     let image1 = document.getElementById("flower_img");
     let answerBox1 = document.getElementById("answerBox1");
     let question1 =document.getElementById("question1");
-    let comment1 = document.createElement("p");
-    let bonus = document.createElement("img");
+    
     // Show the solution 1, when the button was pressed. 
     // Hide answer-box
     image1.src = "assets/answers/flowers_answer.svg";
@@ -50,30 +64,18 @@ function checkAnswer1() {
 
     if(answerInput1 == 11){
         //In case, Answer1 is right, write comment and add star-bonus.
-        comment1.textContent = "Mahtava! Vasaus on oikein. Saat";
-        comment1.style.color = "#369f39";
-        comment1.style.fontSize = "2em";
-        question1.append(comment1);
+        rightAnswer(question1);
         
-
-        //Add bonus star-picture
-        bonus.style.scr = "assets/answers/Star.svg";
-        question1.append(bonus);
     }else{
         //In case, Answer1 is wrong, write comment and change border color.
-        question1.style.borderColor = "red";
-    
-        comment1.textContent = "Vastaus " + answerInput1 + " on väärä. Oikein vastaus on 11.";
-        comment1.style.color = "red";
-        comment1.style.fontSize = "2em";
-        question1.append(comment1);
+        wrongAnswer(question1, answerInput1)
     }
 }
 
 
 
 function checkAnswer2(){
-    let answerRadioButton = checkRadioButton("square");
+    let answerRadioButton2 = checkRadioButton("square");
 
     let image2 = document.getElementById("square_img");
     let answerBox2 = document.getElementById("answerBox2");
@@ -81,17 +83,53 @@ function checkAnswer2(){
 
     image2.style.src = "assets/answers/square_answer.svg";
     answerBox2.style.display = "none";
+
+    if (answerRadioButton2 == "A"){
+        rightAnswer(question2);
+    }else{
+        wrongAnswer(question2);
+    }
     
-    let comment2 = rightAnswer();
-    question2.appendChild(comment2);
-   
 
 
 }
-function checkAnswer4(){
-    let answer = checkRadioButton("tetris");
 
-    console.log(answer);
+function checkAnswer3(){
+    let answerInput3 = Number(document.getElementById("answer3").value);
+    let image3 = document.getElementById("car_img");
+    let answerBox3 = document.getElementById("answerBox3");
+    let question3 =document.getElementById("question3");
+    
+    // Show the solution 1, when the button was pressed. 
+    // Hide answer-box
+    image3.src = "assets/answers/flowers_answer.svg";
+    answerBox3.style.display = "none";
+
+    if(answerInput3 == 87){
+        //In case, Answer1 is right, write comment and add star-bonus.
+        rightAnswer(question3);
+        
+    }else{
+        //In case, Answer1 is wrong, write comment and change border color.
+        wrongAnswer(question3, answerInput3)
+    }
+
+}
+function checkAnswer4(){
+    let answerRadioButton4 = checkRadioButton("tetris");
+    let image4 = document.getElementById("tetris_img");
+    let answerBox4 = document.getElementById("answerBox4");
+    let question4 =document.getElementById("question4");
+
+    image4.style.src = "assets/answers/square_answer.svg";
+    answerBox4.style.display = "none";
+
+    if (answerRadioButton4 == "E"){
+        rightAnswer(question4);
+    }else{
+        wrongAnswer(question4);
+    }
+   
 
 
 }

@@ -127,15 +127,20 @@
             </div>
             <div id="question3">
                 <h4>Kysymys 3</h4>
-                <img src="assets/tasks/parking.svg" alt="parking">
-                <label for="answer1">Vastaus</label>
-                <input type="number" name="" id="answer1">
-                <button type="submit">Tarkista</button>
+                <img src="assets/tasks/parking.svg" id="auto_img" alt="parking">
+                <div class="answer-box" id="answerBox3">
+                    <div>
+                        <label for="answer3">Vastaus</label>
+                        <input type="number" name="" id="answer3">
+                    </div>
+                    <button id="check3" onclick="checkAnswer3()">Tarkista</button>
+                </div>
+                
             </div>
             <div id="question4">
                 <h4>Kysymys 4</h4>
-                <img src="assets/tasks/tetris.svg" alt="tetris">
-                <div class="answer-box">
+                <img src="assets/tasks/tetris.svg" id="tetris_img" alt="tetris">
+                <div id="answerBox4" class="answer-box">
                     <label>Vastaus</label>
                     <div>
                         <input type="radio" id="tetrisA" name="tetris" value="A">
