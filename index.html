@@ -127,7 +127,7 @@
             </div>
             <div id="question3">
                 <h4>Kysymys 3</h4>
-                <img src="assets/tasks/parking.svg" id="auto_img" alt="parking">
+                <img src="assets/tasks/parking.svg" id="car_img" alt="parking">
                 <div class="answer-box" id="answerBox3">
                     <div>
                         <label for="answer3">Vastaus</label>
@@ -172,7 +172,10 @@
             </div>
             <div id="question5">
                 <h4>Kysymys 5</h4>
-                <img src="assets/tasks/socks.svg" alt="socks">
+                <img src="assets/tasks/socks.jpg" alt="socks" usemap="#unpaired">
+                <map name="unpaired">
+                    <area shape="poly" coords="453, 381, 531,411,493,534,382,592,352,536" href="" alt="" onclick="checkAnswer5()">
+                </map>
                 <label for="answer1">Vastaus</label>
                 <input type="number" name="" id="answer1">
                 <button type="submit">Tarkista</button>
