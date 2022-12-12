@@ -15,7 +15,7 @@ function checkAnswer1() {
     answerBox1.style.display = "none";
 
     if(answerInput1 == 11){
-        //In case, Answer1 is right, write comment
+        //In case, Answer1 is right, write comment and add star-bonus.
         comment1.textContent = "Mahtava! Vasaus on oikein. Saat";
         comment1.style.color = "#369f39";
         comment1.style.fontSize = "2em";
@@ -29,13 +29,22 @@ function checkAnswer1() {
         //In case, Answer1 is wrong, write comment and change border color.
         question1.style.borderColor = "red";
     
-        comment1.textContent = "Vastaus " + answerInput1 + "on väärä. Oikein vastaus on 11.";
+        comment1.textContent = "Vastaus " + answerInput1 + " on väärä. Oikein vastaus on 11.";
         comment1.style.color = "red";
         comment1.style.fontSize = "2em";
         question1.append(comment1);
-
-
-
-
     }
+}
+
+function checkAnswer2() {
+    let radioButtons = document.getElementsByName("square");
+    let radioButtonAnswer;
+
+    for (radio of radioButtons) {
+        if(radio.checked){
+            radioButtonAnswer = radio.value;
+        }
+        
+    }
+    console.log(radioButtonAnswer);
 }
