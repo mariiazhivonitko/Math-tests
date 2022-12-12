@@ -144,6 +144,12 @@ function checkAnswer4(){
 
 }
 function checkAnswer5() {
+    let question5 =document.getElementById("question5");
+    let image5 = document.getElementById("socks");
+    image5.src = "assets/answers/socks_answer.svg";
+    rightAnswer(question5);
+
+
 
 }
     //Check if the answer is right
