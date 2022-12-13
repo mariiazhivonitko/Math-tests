@@ -185,6 +185,7 @@ function result(){
     let button = document.getElementById("result_button");
     let starPicture = "<img src='assets/answers/Star.png'>"
     let prize = document.createElement("div");
+    
 
     button.style.display = "none";
     comment.textContent = "Loistava Työtä! Saat " + resultPisteet + " pisteet!";
