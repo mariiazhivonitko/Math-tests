@@ -190,12 +190,27 @@ button {
 }
 #form img {
     max-width: 100%;
+}
+
+#question5 {
+    position: relative;
+}
+#question5 img {
+    width: 100%;
+    height: auto;
+}
+
+#question5 div {
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+}
+
+#question5 div:hover {
+    background-color: rgba(0, 0, 0, .25);
+  }
 
 
-}
-#answers {
-    display: none;
-}
 #result {
     display: none;
 }

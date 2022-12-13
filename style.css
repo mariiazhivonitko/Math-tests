@@ -1,0 +1,29 @@
+img {
+    width: 50%;
+}
+
+.hover_group:hover {
+    opacity: 1;
+  }
+  
+  #projectsvg {
+    position: relative;
+    width: 100%;
+    padding-bottom: 77%;
+    vertical-align: middle;
+    margin: 0;
+    overflow: hidden;
+    background: lightgreen;
+  }
+  
+  #projectsvg svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #socks div:hover {
+    background-color: rgba(0, 0, 0, .25);
+  }
+  
