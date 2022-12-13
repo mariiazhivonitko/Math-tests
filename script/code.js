@@ -182,8 +182,22 @@ function wrongAnswer5(){
 function result(){
     let result = document.getElementById("result");
     let comment = document.createElement("p");
+    let button = document.getElementById("result_button");
+    let starPicture = "<img src='assets/answers/Star.png'>"
+    let prize = document.createElement("div");
+
+    button.style.display = "none";
     comment.textContent = "Loistava Työtä! Saat " + resultPisteet + " pisteet!";
+    comment.style.color = "white";
+    comment.style.background = "#369f39";
+    comment.style.fontSize = "1.5em";
+    comment.style.padding = "5px";
     result.appendChild(comment);
+    for (let index = 0; index < resultPisteet; index++) {
+        prize.innerHTML += starPicture;
+        
+    }
+    result.appendChild(prize);
 
 }
     //Check if the answer is right

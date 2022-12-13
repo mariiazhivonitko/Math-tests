@@ -188,8 +188,9 @@ input {
 button {
     background-color: #369f39;
     color: #fff;
-    margin: 5px;
+    margin: 15px;
     border: none;
+    
     
 }
 #form img {
@@ -219,4 +220,15 @@ button {
 
 #result img {
     max-width: 50px;
+       
+}
+#result {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#result div {
+    border: none;
+    align-items: center;
 }
