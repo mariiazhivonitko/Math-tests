@@ -143,14 +143,35 @@ function checkAnswer4(){
 
 
 }
-function checkAnswer5() {
+function rightAnswer5() {
     let question5 =document.getElementById("question5");
-    let image5 = document.getElementById("socks");
+    let image5 = document.getElementById("socks_img");
     image5.src = "assets/answers/socks_answer.svg";
+    let socksDiv = document.getElementById("socks");
+    socksDiv.style.display = "none";
+
+    image5.src = "assets/answers/socks_answer.svg";
+
     rightAnswer(question5);
+}
 
+function wrongAnswer5(){
+    let question5 = document.getElementById("question5");
+    let image5 = document.getElementById("socks_img");
+    let socksDiv = document.getElementById("socks");
 
+    image5.src = "assets/answers/socks_answer.svg";
+    let comment = document.createElement("p");
 
+    question5.style.borderColor = "red";
+    
+    comment.textContent = "Vastaus on väärä";
+    comment.style.color = "white";
+    comment.style.background = "red";
+    comment.style.fontSize = "1.5em";
+    comment.style.padding = "5px";
+    socksDiv.style.display = "none";
+    question5.append(comment);
 }
     //Check if the answer is right
     //if (radioButtonAnswer == "D") {

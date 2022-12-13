@@ -198,9 +198,12 @@ button {
 #question5 img {
     width: 100%;
     height: auto;
+    
 }
-
-#question5 div {
+#form #socks{
+    border: none;
+}
+#socks div {
     position: absolute;
     border: none;
     border-radius: 50%;
