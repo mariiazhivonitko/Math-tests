@@ -1,7 +1,7 @@
-//Check question1
-//document.getElementById("check1").onclick = checkAnswer();
-//let answerInput1 = Number(document.getElementById("answer1").value);
-
+/*Mariia Zhivonitko 
+TIK22SP, sg 6
+Web-projekti*/
+let resultPisteet = 0;
 /**
  * Returns the chosen radio-button value
  */
@@ -71,6 +71,7 @@ function checkAnswer1() {
     if(answerInput1 == rightAnswer1){
         //In case, Answer1 is right, write comment and add star-bonus.
         rightAnswer(question1);
+        result++;
         
     }else{
         //In case, Answer1 is wrong, write comment and change border color.
@@ -93,6 +94,7 @@ function checkAnswer2(){
 
     if (answerRadioButton2 == rightAnswer2){
         rightAnswer(question2);
+        result++;
     }else{
         wrongAnswer(question2, rightAnswer2);
     }
@@ -116,6 +118,7 @@ function checkAnswer3(){
     if(answerInput3 == rightAnswer3){
         //In case, Answer1 is right, write comment and add star-bonus.
         rightAnswer(question3);
+        result++;
         
     }else{
         //In case, Answer1 is wrong, write comment and change border color.
@@ -136,6 +139,7 @@ function checkAnswer4(){
 
     if (answerRadioButton4 == rightAnswer4){
         rightAnswer(question4);
+        result++;
     }else{
         wrongAnswer(question4, rightAnswer4);
     }
@@ -153,6 +157,7 @@ function rightAnswer5() {
     image5.src = "assets/answers/socks_answer.svg";
 
     rightAnswer(question5);
+    result++;
 }
 
 function wrongAnswer5(){
@@ -172,6 +177,14 @@ function wrongAnswer5(){
     comment.style.padding = "5px";
     socksDiv.style.display = "none";
     question5.append(comment);
+}
+
+function result(){
+    let result = document.getElementById("result");
+    let comment = document.createElement("p");
+    comment.textContent = "Loistava Työtä! Saat " + resultPisteet + " pisteet!";
+    result.appendChild(comment);
+
 }
     //Check if the answer is right
     //if (radioButtonAnswer == "D") {
