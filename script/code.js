@@ -191,26 +191,31 @@ function visaResult(resultPisteet){
     }
     alert(resultComment + "pisteet on " + resultPisteet);    
     let resultDiv = document.getElementById("result");
+    let resultPicture = document.getElementById("resultPicture");
     let comment = document.createElement("p");
     let button = document.getElementById("resultButton");
-    //let starPicture = "<img src='assets/answers/Star.png'>"
-    //let prize = document.createElement("div");
+    let starPicture = "<img src='assets/answers/Star.png'>"
+    let prize = document.createElement("div");
     
 
     button.style.display = "none";
+    resultPicture.style.display = "none";
+    //starPicture.style.max-width = "20px";
     comment.textContent = resultComment;
     comment.style.color = "white";
     comment.style.background = "#369f39";
     comment.style.fontSize = "1.5em";
     comment.style.padding = "5px";
-    result.appendChild(comment);
-    /*for (let index = 0; index < resultPisteet; index++) {
+    
+    for (let index = 0; index < resultPisteet; index++) {
         prize.innerHTML += starPicture;
         
     }
-    result.appendChild(prize);*/
+    resultDiv.appendChild(prize);
+    resultDiv.appendChild(comment);
+    
 
 }
  
-    //    Saat " + resultPisteet + " pisteet!"
+ 
     
