@@ -41,7 +41,7 @@ function rightAnswer(element) {
 
     element.style.borderColor = "red";
     
-    comment.textContent = "Vastaus on väärä. Oikein vastaus on " + rightAnswer + ".";
+    comment.textContent = "Vastauksesi on väärä.";
     comment.style.color = "white";
     comment.style.background = "red";
     comment.style.fontSize = "1.5em";
@@ -52,23 +52,24 @@ function rightAnswer(element) {
 
 function checkAnswer1() {
     let answerInput1 = Number(document.getElementById("answer1").value);
+
     let image1 = document.getElementById("flower_img");
     let answerBox1 = document.getElementById("answerBox1");
     let question1 = document.getElementById("question1");
     let rightAnswer1 = 11;
-    // Show the solution 1, when the button was pressed. 
+    // Show the solution, when the button was pressed. 
     // Hide answer-box
     image1.src = "assets/answers/flowers_answer.svg";
     answerBox1.style.display = "none";
 
     if(answerInput1 == rightAnswer1){
-        //In case, Answer1 is right, write comment and add star-bonus.
+        //In case, Answer is right, write comment and summ points.
         rightAnswer(question1);
         resultPisteet += 1;
         
     }else{
-        //In case, Answer1 is wrong, write comment and change border color.
-        wrongAnswer(question1, rightAnswer1)
+        //In case, Answer is wrong, write comment and change border color.
+        wrongAnswer(question1)
     }
 }
 
@@ -82,18 +83,19 @@ function checkAnswer2(){
     let answerBox2 = document.getElementById("answerBox2");
     let question2 =document.getElementById("question2");
 
+    // Show the solution, when the button was pressed. 
+    // Hide answer-box
     image2.src = "assets/answers/square_answer.svg";
     answerBox2.style.display = "none";
 
     if (answerRadioButton2 == rightAnswer2){
+        //In case, Answer is right, write comment and summ points.
         rightAnswer(question2);
         resultPisteet++;
     }else{
-        wrongAnswer(question2, rightAnswer2);
+        //In case, Answer is wrong, write comment and change border color.
+        wrongAnswer(question2);
     }
-    
-
-
 }
 
 function checkAnswer3(){
@@ -103,7 +105,7 @@ function checkAnswer3(){
     let question3 =document.getElementById("question3");
     let rightAnswer3 = 87;
     
-    // Show the solution 1, when the button was pressed. 
+    // Show the solution, when the button was pressed. 
     // Hide answer-box
     image3.src = "assets/answers/car_answer.svg";
     answerBox3.style.display = "none";
@@ -115,7 +117,7 @@ function checkAnswer3(){
         
     }else{
         //In case, Answer1 is wrong, write comment and change border color.
-        wrongAnswer(question3, rightAnswer3)
+        wrongAnswer(question3)
     }
 
 }
@@ -134,7 +136,7 @@ function checkAnswer4(){
         rightAnswer(question4);
         resultPisteet++;
     }else{
-        wrongAnswer(question4, rightAnswer4);
+        wrongAnswer(question4);
     }
    
 
@@ -209,6 +211,12 @@ function visaResult(resultPisteet){
     
 
 }
+
+/**
+ * 1. star-bonus 
+ * 2. JS-tehtävä
+ * 3. source of the pictures
+ */
  
  
     
