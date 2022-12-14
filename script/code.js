@@ -24,19 +24,12 @@ let resultPisteet = 0;
  */
 function rightAnswer(element) {
     let comment = document.createElement("p");
-    let bonus = document.createElement("img");
     comment.textContent = "Mahtava! Vastaus on oikein.";
     comment.style.color = "white";
     comment.style.background = "#369f39";
     comment.style.fontSize = "1.5em";
     comment.style.padding = "5px";
     element.append(comment);
-
-    //Add bonus star-picture
-    /*bonus.scr = "assets/answers/Star.svg";
-    bonus.style.height = "20px";
-
-    question1.append(bonus);*/
 }
 
 /**

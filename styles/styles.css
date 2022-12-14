@@ -232,6 +232,11 @@ button {
     border: none;
     align-items: center;
 }
+
+#resultButton {
+    font-size: 1.5em;
+}
+
 @media screen and (max-width: 900px) {
     #container { 
         display: grid;
