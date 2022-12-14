@@ -71,7 +71,7 @@ function checkAnswer1() {
     if(answerInput1 == rightAnswer1){
         //In case, Answer1 is right, write comment and add star-bonus.
         rightAnswer(question1);
-        result++;
+        resultPisteet += 1;
         
     }else{
         //In case, Answer1 is wrong, write comment and change border color.
@@ -94,7 +94,7 @@ function checkAnswer2(){
 
     if (answerRadioButton2 == rightAnswer2){
         rightAnswer(question2);
-        result++;
+        resultPisteet++;
     }else{
         wrongAnswer(question2, rightAnswer2);
     }
@@ -118,7 +118,7 @@ function checkAnswer3(){
     if(answerInput3 == rightAnswer3){
         //In case, Answer1 is right, write comment and add star-bonus.
         rightAnswer(question3);
-        result++;
+        resultPisteet++;
         
     }else{
         //In case, Answer1 is wrong, write comment and change border color.
@@ -139,7 +139,7 @@ function checkAnswer4(){
 
     if (answerRadioButton4 == rightAnswer4){
         rightAnswer(question4);
-        result++;
+        resultPisteet++;
     }else{
         wrongAnswer(question4, rightAnswer4);
     }
@@ -157,7 +157,7 @@ function rightAnswer5() {
     image5.src = "assets/answers/socks_answer.svg";
 
     rightAnswer(question5);
-    result++;
+    resultPisteet++;
 }
 
 function wrongAnswer5(){
@@ -179,29 +179,38 @@ function wrongAnswer5(){
     question5.append(comment);
 }
 
-function result(){
-    let result = document.getElementById("result");
+function visaResult(resultPisteet){
+    
+    let resultComment;
+    if(Number(resultPisteet)>=4){
+        resultComment = "Mahtava työtä!!! Olet Matematiikan mestari!!!";
+    }else if (Number(resultPisteet)>=2) {
+        resultComment = "Hyvää Työtä!";
+    }else {
+        resultComment = "Tarvitset harjoittella lisää.";
+    }
+    alert(resultComment + "pisteet on " + resultPisteet);    
+    let resultDiv = document.getElementById("result");
     let comment = document.createElement("p");
-    let button = document.getElementById("result_button");
-    let starPicture = "<img src='assets/answers/Star.png'>"
-    let prize = document.createElement("div");
+    let button = document.getElementById("resultButton");
+    //let starPicture = "<img src='assets/answers/Star.png'>"
+    //let prize = document.createElement("div");
     
 
     button.style.display = "none";
-    comment.textContent = "Loistava Työtä! Saat " + resultPisteet + " pisteet!";
+    comment.textContent = resultComment;
     comment.style.color = "white";
     comment.style.background = "#369f39";
     comment.style.fontSize = "1.5em";
     comment.style.padding = "5px";
     result.appendChild(comment);
-    for (let index = 0; index < resultPisteet; index++) {
+    /*for (let index = 0; index < resultPisteet; index++) {
         prize.innerHTML += starPicture;
         
     }
-    result.appendChild(prize);
+    result.appendChild(prize);*/
 
 }
-    //Check if the answer is right
-    //if (radioButtonAnswer == "D") {
-
+ 
+    //    Saat " + resultPisteet + " pisteet!"
     
