@@ -1,6 +1,8 @@
 /*Mariia Zhivonitko 
 TIK22SP, sg 6
 Web-projekti*/
+
+
 let resultPisteet = 0;
 /**
  * Returns the chosen radio-button value
@@ -36,7 +38,7 @@ function rightAnswer(element) {
  * 
  * Make changes for the case-wrong answer.
  */
- function wrongAnswer(element, rightAnswer) {
+ function wrongAnswer(element) {
     let comment = document.createElement("p");
 
     element.style.borderColor = "red";
@@ -63,7 +65,7 @@ function checkAnswer1() {
     answerBox1.style.display = "none";
 
     if(answerInput1 == rightAnswer1){
-        //In case, Answer is right, write comment and summ points.
+        //In case, Answer is right, write comment and count points.
         rightAnswer(question1);
         resultPisteet += 1;
         
@@ -128,7 +130,8 @@ function checkAnswer4(){
     let question4 =document.getElementById("question4");
     let rightAnswer4 = "E";
 
-
+    // Show the solution, when the button was pressed. 
+    // Hide answer-box
     image4.src = "assets/answers/tetris_answer.svg";
     answerBox4.style.display = "none";
 
@@ -143,40 +146,37 @@ function checkAnswer4(){
 
 }
 function rightAnswer5() {
+    //show picture with an answer explanation
     let question5 =document.getElementById("question5");
     let image5 = document.getElementById("socks_img");
     image5.src = "assets/answers/socks_answer.svg";
+
+    //Hide divs to choose an answer.
     let socksDiv = document.getElementById("socks");
     socksDiv.style.display = "none";
-
-    image5.src = "assets/answers/socks_answer.svg";
 
     rightAnswer(question5);
     resultPisteet++;
 }
 
 function wrongAnswer5(){
+    //show picture with an answer explanation
     let question5 = document.getElementById("question5");
     let image5 = document.getElementById("socks_img");
-    let socksDiv = document.getElementById("socks");
-
     image5.src = "assets/answers/socks_answer.svg";
-    let comment = document.createElement("p");
 
-    question5.style.borderColor = "red";
-    
-    comment.textContent = "Vastaus on väärä";
-    comment.style.color = "white";
-    comment.style.background = "red";
-    comment.style.fontSize = "1.5em";
-    comment.style.padding = "5px";
+    //Hide divs to choose an answer.
+    let socksDiv = document.getElementById("socks");
     socksDiv.style.display = "none";
-    question5.append(comment);
+    
+    wrongAnswer(question5);
 }
 
 function visaResult(resultPisteet){
     
     let resultComment;
+
+    //Classification and result comments
     if(Number(resultPisteet)>=4){
         resultComment = "Mahtava työtä!!! Olet Matematiikan mestari!!!";
     }else if (Number(resultPisteet)>=2) {
@@ -184,24 +184,26 @@ function visaResult(resultPisteet){
     }else {
         resultComment = "Tarvitset harjoittella lisää.";
     }
-    alert(resultComment + "pisteet on " + resultPisteet);    
+      
     let resultDiv = document.getElementById("result");
     let resultPicture = document.getElementById("resultPicture");
     let comment = document.createElement("p");
     let button = document.getElementById("resultButton");
-    let starPicture = "<img src='assets/answers/Star.png'>"
+    let starPicture = "<img  width='80px'  src='assets/answers/Star.png'>"
     let prize = document.createElement("div");
     
-
+    //Hide vastaus button and picture
     button.style.display = "none";
     resultPicture.style.display = "none";
-    //starPicture.style.max-width = "20px";
+    
+    //Show result comment
     comment.textContent = resultComment;
     comment.style.color = "white";
     comment.style.background = "#369f39";
     comment.style.fontSize = "1.5em";
     comment.style.padding = "5px";
-    
+
+    //Show star-bonuses    
     for (let index = 0; index < resultPisteet; index++) {
         prize.innerHTML += starPicture;
         
@@ -216,6 +218,7 @@ function visaResult(resultPisteet){
  * 1. star-bonus 
  * 2. JS-tehtävä
  * 3. source of the pictures
+ * style='display: block'
  */
  
  
