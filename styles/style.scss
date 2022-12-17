@@ -4,6 +4,7 @@ Web-projekti
 */
 
 //define variables
+$maincolor: #46c24a;
 
 
 body {
@@ -29,28 +30,41 @@ ul {
     grid-template-columns: 1fr 2fr 2fr;
     grid-template-rows: auto auto auto 12vh;
     background-color: #fff;
+    header { /* Headerin muotoilu alkaa */
+        grid-column: 1/4;
+        grid-row: 1/2;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: sticky;
+        min-height: 100px; /* Väliaikainen arvo */
+        >h1 {
+            width: 90%;             /*Otsikon muotoilua täytyy varmaan jossain vaiheessa muuttaa*/
+            text-align: left;
+            font-size: 4em;}
+    }
 }
 
-header { /* Headerin muotoilu alkaa */
+/*header { 
     grid-column: 1/4;
     grid-row: 1/2;
     display: flex;
     align-items: center;
     gap: 10px;
     position: sticky;
-    min-height: 100px; /* Väliaikainen arvo */
+    min-height: 100px; 
     >h1 {
-        width: 90%;             /*Otsikon muotoilua täytyy varmaan jossain vaiheessa muuttaa*/
+        width: 90%;             
         text-align: left;
         font-size: 4em;}
-}
+}*/
 
 
 
 
 
 header, footer { /* Tasainen padding headerin ja footerin välille */
-    background-color: #46c24a;
+    background-color: $maincolor;
     padding: 0px 2em;
 }
 
@@ -58,7 +72,7 @@ nav { /* Navigoinnin muotoilu alkaa */
     grid-column: 1/2;
     grid-row: 2/4;
     list-style: none;
-    background-color: #6bd06e;
+    background-color: $maincolor;
 }
 
 
