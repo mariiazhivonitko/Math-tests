@@ -236,6 +236,12 @@ button {
 #resultButton {
     font-size: 1.5em;
 }
+#staticBackdropLabel{
+    color:#369f39;
+    text-shadow: none;
+    font-weight: bold;
+    font-size: 1.5em;
+}
 
 @media screen and (max-width: 900px) {
     #container { 
@@ -264,5 +270,6 @@ button {
         grid-row: 1/2;
         grid-column: 1/2;
     }
+
     
 }

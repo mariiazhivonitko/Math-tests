@@ -185,7 +185,7 @@ function visaResult(resultPisteet){
         resultComment = "Tarvitset harjoittella lisää.";
     }
       
-    let resultDiv = document.getElementById("result");
+    let resultDiv = document.getElementById("resultBonus");
     let resultPicture = document.getElementById("resultPicture");
     let comment = document.createElement("p");
     let button = document.getElementById("resultButton");
@@ -193,8 +193,8 @@ function visaResult(resultPisteet){
     let prize = document.createElement("div");
     
     //Hide vastaus button and picture
-    button.style.display = "none";
-    resultPicture.style.display = "none";
+    //button.style.display = "none";
+    //resultPicture.style.display = "none";
     
     //Show result comment
     comment.textContent = resultComment;
@@ -203,11 +203,13 @@ function visaResult(resultPisteet){
     comment.style.fontSize = "1.5em";
     comment.style.padding = "5px";
 
+    
     //Show star-bonuses    
     for (let index = 0; index < resultPisteet; index++) {
         prize.innerHTML += starPicture;
         
     }
+    
     resultDiv.appendChild(prize);
     resultDiv.appendChild(comment);
     
