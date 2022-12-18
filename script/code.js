@@ -186,7 +186,6 @@ function visaResult(resultPisteet){
     }
       
     let resultDiv = document.getElementById("resultBonus");
-    let resultPicture = document.getElementById("resultPicture");
     let comment = document.createElement("p");
     let button = document.getElementById("resultButton");
     let starPicture = "<img  width='80px'  src='assets/answers/Star.png'>"
@@ -212,8 +211,14 @@ function visaResult(resultPisteet){
     
     resultDiv.appendChild(prize);
     resultDiv.appendChild(comment);
+
+    button.disabled = true;
     
 
+}
+
+function reloadPage(){
+    document. location. reload();
 }
 
 /**
