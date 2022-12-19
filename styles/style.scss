@@ -7,117 +7,105 @@ $mainColor: #369f39;
 $mediumColor :#46c24a;
 $lightColor: #6bd06e;
 $conrastColor: #a05c9d;
+$neutralColor: white;
 
-@mixin theme($fontcolor:white, $fontfamily:'Patrick Hand') {
+@mixin theme($fontcolor:$neutralColor, $fontfamily:'Patrick Hand') {
     color: $fontcolor;
     font-family: $fontfamily, cursive;
     text-shadow: 0px 0px 3px #000;
 
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
-    @include theme;
-       
-}
-
 * {
     box-sizing: border-box;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0px;
+body {
+    margin: 0px;
+    padding: 0px;
+    @include theme;
+    #container { 
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: auto auto auto auto;
+        background-color: $neutralColor;
+        header { 
+            grid-column: 1/4;
+            grid-row: 1/2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: sticky;
+            min-height: 100px;
+            background-color: $mediumColor;
+            padding: 0px 2em;
+            h1{
+                width: 90%;
+                text-align: left;
+                font-size: 4em;
+            }
+            a{
+                color: $neutralColor;
+                :hover{
+                    color: $conrastColor;
+                }
+
+            }
+
+        }
+        nav {
+            grid-column: 1/2;
+            grid-row: 2/4;
+            list-style: none;
+            background-color: $lightColor;
+            ul {
+                list-style-type: none;
+                padding-left: 0px;
+                li {
+                    display: inline-block;
+                    margin: 8px auto 8px auto;
+                    width: 100%;
+                    :hover { 
+                        background-color: $conrastColor;
+                        opacity: 95%;
+                        text-shadow: 0px 0px 2px rgb(255, 245, 46);
+                        height: 4.5em;
+                        
+                        box-shadow: 2px 2px 10px $neutralColor,
+                                    -2px -2px 10px $neutralColor,
+                                    -2px 2px 10px $neutralColor,
+                                    2px -2px 10px $neutralColor;
+                    }
+                    >div {
+                        margin: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        background-color: $mainColor;
+                        opacity: 100%;
+                        width: 90%; 
+                        height: 4.5em; 
+                        border-radius: 3px;
+                        a{
+                            text-decoration: none;
+                            color: $neutralColor;
+                        }
+                        
+                        
+                            
+                        
+                    }
+                }
+            }
+        }
+    }  
 }
 
-#container { 
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: auto auto auto auto;
-    background-color: #fff;
-}
 
-header { /* Headerin muotoilu alkaa */
-    grid-column: 1/4;
-    grid-row: 1/2;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: sticky;
-    min-height: 100px; /* Väliaikainen arvo */
-}
-
-header>h1 {
-    width: 90%;             /*Otsikon muotoilua täytyy varmaan jossain vaiheessa muuttaa*/
-    text-align: left;
-    font-size: 4em;
-}
-header>a:visited{
-    color: #fff;
-}
-
-header>a:hover{
-    color:#a05c9d;
-}
-
-
-
-header, footer { /* Tasainen padding headerin ja footerin välille */
+footer { /* Tasainen padding headerin ja footerin välille */
     background-color: #46c24a;
     padding: 0px 2em;
-}
-
-nav { /* Navigoinnin muotoilu alkaa */
-    grid-column: 1/2;
-    grid-row: 2/4;
-    list-style: none;
-    background-color: #6bd06e;
-}
-
-
-
-nav h1 {
-    text-align: center;
-}
-
-nav ul>li {
-    display: inline-block;
-    margin: 8px auto 8px auto;
-    width: 100%;
-}
-
-nav li>div { /* Visa valinta muotoilu*/
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: #369f39;
-    opacity: 100%;
-    width: 90%; 
-    height: 4.5em; 
-    border-radius: 3px; 
-}
-
-nav li>div:hover {  /*visa valinta napit vaihtavat väriä kun käyttäjä vie hiiren niiden yli*/
-    background-color: #a05c9d;
-    opacity: 95%;
-    text-shadow: 0px 0px 2px rgb(255, 245, 46);
-    height: 4.5em;
-    box-shadow: 2px 2px 10px #fff,
-                -2px -2px 10px #fff,
-                -2px 2px 10px #fff,
-                2px -2px 10px #fff;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-}
-
-nav a:visited {
-    color: #fff;
 }
 
 
