@@ -2,13 +2,24 @@
 TIK22SP, sg 6
 Web-projekti
 */
+
+$mainColor: #369f39;
+$mediumColor :#46c24a;
+$lightColor: #6bd06e;
+$conrastColor: #a05c9d;
+
+@mixin theme($fontcolor:white, $fontfamily:'Patrick Hand') {
+    color: $fontcolor;
+    font-family: $fontfamily, cursive;
+    text-shadow: 0px 0px 3px #000;
+
+}
+
 body {
     margin: 0px;
     padding: 0px;
-    font-family: 'Patrick Hand', cursive;
-    text-shadow: 0px 0px 3px #000;
-    color: #fff;
-    
+    @include theme;
+       
 }
 
 * {

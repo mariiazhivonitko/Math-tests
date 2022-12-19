@@ -1,326 +1,307 @@
+@charset "UTF-8";
 /*Mariia Zhivonitko 
 TIK22SP, sg 6
 Web-projekti
 */
 body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Patrick Hand', cursive;
-    text-shadow: 0px 0px 3px #000;
-    color: #fff;
-    
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: "Patrick Hand", cursive;
+  text-shadow: 0px 0px 3px #000;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul {
-    list-style-type: none;
-    padding-left: 0px;
+  list-style-type: none;
+  padding-left: 0px;
 }
 
-#container { 
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: auto auto auto auto;
-    background-color: #fff;
+#container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: auto auto auto auto;
+  background-color: #fff;
 }
 
 header { /* Headerin muotoilu alkaa */
-    grid-column: 1/4;
-    grid-row: 1/2;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: sticky;
-    min-height: 100px; /* Väliaikainen arvo */
+  grid-column: 1/4;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: sticky;
+  min-height: 100px; /* Väliaikainen arvo */
 }
 
-header>h1 {
-    width: 90%;             /*Otsikon muotoilua täytyy varmaan jossain vaiheessa muuttaa*/
-    text-align: left;
-    font-size: 4em;
-}
-header>a:visited{
-    color: #fff;
+header > h1 {
+  width: 90%; /*Otsikon muotoilua täytyy varmaan jossain vaiheessa muuttaa*/
+  text-align: left;
+  font-size: 4em;
 }
 
-header>a:hover{
-    color:#a05c9d;
+header > a:visited {
+  color: #fff;
 }
 
-
+header > a:hover {
+  color: #a05c9d;
+}
 
 header, footer { /* Tasainen padding headerin ja footerin välille */
-    background-color: #46c24a;
-    padding: 0px 2em;
+  background-color: #46c24a;
+  padding: 0px 2em;
 }
 
 nav { /* Navigoinnin muotoilu alkaa */
-    grid-column: 1/2;
-    grid-row: 2/4;
-    list-style: none;
-    background-color: #6bd06e;
+  grid-column: 1/2;
+  grid-row: 2/4;
+  list-style: none;
+  background-color: #6bd06e;
 }
-
-
 
 nav h1 {
-    text-align: center;
+  text-align: center;
 }
 
-nav ul>li {
-    display: inline-block;
-    margin: 8px auto 8px auto;
-    width: 100%;
+nav ul > li {
+  display: inline-block;
+  margin: 8px auto 8px auto;
+  width: 100%;
 }
 
-nav li>div { /* Visa valinta muotoilu*/
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: #369f39;
-    opacity: 100%;
-    width: 90%; 
-    height: 4.5em; 
-    border-radius: 3px; 
+nav li > div { /* Visa valinta muotoilu*/
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #369f39;
+  opacity: 100%;
+  width: 90%;
+  height: 4.5em;
+  border-radius: 3px;
 }
 
-nav li>div:hover {  /*visa valinta napit vaihtavat väriä kun käyttäjä vie hiiren niiden yli*/
-    background-color: #a05c9d;
-    opacity: 95%;
-    text-shadow: 0px 0px 2px rgb(255, 245, 46);
-    height: 4.5em;
-    box-shadow: 2px 2px 10px #fff,
-                -2px -2px 10px #fff,
-                -2px 2px 10px #fff,
-                2px -2px 10px #fff;
+nav li > div:hover { /*visa valinta napit vaihtavat väriä kun käyttäjä vie hiiren niiden yli*/
+  background-color: #a05c9d;
+  opacity: 95%;
+  text-shadow: 0px 0px 2px rgb(255, 245, 46);
+  height: 4.5em;
+  box-shadow: 2px 2px 10px #fff, -2px -2px 10px #fff, -2px 2px 10px #fff, 2px -2px 10px #fff;
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 nav a:visited {
-    color: #fff;
+  color: #fff;
 }
-
 
 footer { /* Footerin muotoilu alkaa */
-    grid-column: 1/4;
-    grid-row: 4/5;
-
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    padding: 10px;
-
-    min-height: 50px; /* Väliaikainen arvo */
+  grid-column: 1/4;
+  grid-row: 4/5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  min-height: 50px; /* Väliaikainen arvo */
 }
 
-
-.fa-solid, .fa-regular, .fa-light, .fa-thin{ /* FontAwesome ikonit */
-    font-family: 'FontAwesome';
-    font-size: 35px;
+.fa-solid, .fa-regular, .fa-light, .fa-thin { /* FontAwesome ikonit */
+  font-family: "FontAwesome";
+  font-size: 35px;
 }
 
-.fa-house-chimney, .fa-circle-info{ /* Home ja Info ikonit */
-    font-size: 50px;
-    margin-right: 55px;
+.fa-house-chimney, .fa-circle-info { /* Home ja Info ikonit */
+  font-size: 50px;
+  margin-right: 55px;
 }
 
 header img {
-    height: 100px;
+  height: 100px;
 }
 
 #form {
-    grid-column: 2/4;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr 1fr auto;
-    gap: 20px;
-    padding: 10px;
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr auto;
+  gap: 20px;
+  padding: 10px;
 }
 
 h2 {
-    grid-column: 1/3;
-    grid-row: 1/2;
-    background-color: #369f39;
-    text-align: center;
-    
+  grid-column: 1/3;
+  grid-row: 1/2;
+  background-color: #369f39;
+  text-align: center;
 }
 
 #form div {
-    border: 3px solid #369f39;
-    /*max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;*/
+  border: 3px solid #369f39;
+  /*max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;*/
 }
 
 #form .answer-box {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    border: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  border: none;
 }
 
 #form .answer-box div {
-    border: none;
-    margin: 5px;
+  border: none;
+  margin: 5px;
 }
 
 #form div #question5 {
-    grid-column: 1/3;
-    grid-row: 5/6;
-    background-color: #a05c9d;
-    display: flex;
-    justify-content: space-around;
+  grid-column: 1/3;
+  grid-row: 5/6;
+  background-color: #a05c9d;
+  display: flex;
+  justify-content: space-around;
 }
 
 #form h4 {
-    background-color: #369f39;
-    padding: 5px;
-    
+  background-color: #369f39;
+  padding: 5px;
 }
 
 label {
-    color: #369f39;
-    padding: 5px;
-    text-shadow: none;
-    font-weight: bold;
-
-
+  color: #369f39;
+  padding: 5px;
+  text-shadow: none;
+  font-weight: bold;
 }
 
 input {
-    width:20%;
+  width: 20%;
 }
+
 button {
-    background-color: #369f39;
-    color: #fff;
-    margin: 15px;
-    border: none;
-    
-    
+  background-color: #369f39;
+  color: #fff;
+  margin: 15px;
+  border: none;
 }
+
 #form img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 #question5 {
-    position: relative;
+  position: relative;
 }
+
 #question5 img {
-    width: 100%;
-    height: auto;
-    
+  width: 100%;
+  height: auto;
 }
-#form #socks{
-    border: none;
+
+#form #socks {
+  border: none;
 }
+
 #socks div {
-    position: absolute;
-    border: none;
-    border-radius: 50%;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
 }
 
 #question5 div:hover {
-    background-color: rgba(0, 0, 0, .25);
-  }
+  background-color: rgba(0, 0, 0, 0.25);
+}
 
 #result img {
-    max-width: 100%;
-       
+  max-width: 100%;
 }
+
 #result {
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
 }
 
 #result div {
-    border: none;
-    align-items: center;
+  border: none;
+  align-items: center;
 }
 
 #resultButton {
-    font-size: 1.5em;
-}
-.modal-header{
-    background-color: #369f39;
-    
-    display: flex;
-    font-size: 1.5em;
-    align-items: stretch;
+  font-size: 1.5em;
 }
 
+.modal-header {
+  background-color: #369f39;
+  display: flex;
+  font-size: 1.5em;
+  align-items: stretch;
+}
 
 @media screen and (max-width: 889px) {
-    #container { 
-        display: grid;
-        grid-template-columns: 1fr 3fr ;
-        grid-template-rows: auto auto auto auto;
-    }
-    header { 
-        grid-column: 1/3;
-        grid-row: 1/2;
-    }
-    nav {
-        grid-column: 1/2;
-        grid-row: 2/4;
-    }
-    footer { /* Footerin muotoilu alkaa */
-        grid-column: 1/3;
-        grid-row: 4/5;
-    }
-    #form {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto auto auto;
-    }
-    h2 {
-        grid-row: 1/2;
-        grid-column: 1/2;
-    }
-    .fa-house-chimney, .fa-circle-info{ /* Home ja Info ikonit */
-        font-size: 40px;
-        margin-right: 25px;
-    }
-    nav li>div {
-        font-size: 1.25em;
-    }
-
-    footer {
-        font-size: 1.5em;
-    }
-    
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  header {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  nav {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+  footer { /* Footerin muotoilu alkaa */
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+  #form {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+  }
+  h2 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .fa-house-chimney, .fa-circle-info { /* Home ja Info ikonit */
+    font-size: 40px;
+    margin-right: 25px;
+  }
+  nav li > div {
+    font-size: 1.25em;
+  }
+  footer {
+    font-size: 1.5em;
+  }
 }
 @media only screen and (max-width: 768px) {
-    /*kun alle 768px leveys piilotetaan valikko ja siitä tulee navbar*/
-    nav li>div {
-        font-size: 1em;
-    }
-
-    .näkymätön {
-        display: none;
-    }
-
-    .fullArticle {
-        grid-column: 1/3;
-    }
-
-    #mainHeader {
-        font-size: 2.5em;
-    } 
-
-    .fa-bars {
-        display: inline;
-    }
-
+  /*kun alle 768px leveys piilotetaan valikko ja siitä tulee navbar*/
+  nav li > div {
+    font-size: 1em;
+  }
+  .näkymätön {
+    display: none;
+  }
+  .fullArticle {
+    grid-column: 1/3;
+  }
+  #mainHeader {
+    font-size: 2.5em;
+  }
+  .fa-bars {
+    display: inline;
+  }
 }
+
+/*# sourceMappingURL=styles.css.map */
