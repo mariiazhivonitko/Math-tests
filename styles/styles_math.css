@@ -23,7 +23,7 @@ ul {
 #container { 
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: auto auto auto 12vh;
+    grid-template-rows: auto auto auto auto;
     background-color: #fff;
 }
 
@@ -41,6 +41,13 @@ header>h1 {
     width: 90%;             /*Otsikon muotoilua täytyy varmaan jossain vaiheessa muuttaa*/
     text-align: left;
     font-size: 4em;
+}
+header>a:visited{
+    color: #fff;
+}
+
+header>a:hover{
+    color:#a05c9d;
 }
 
 
@@ -82,8 +89,6 @@ nav li>div { /* Visa valinta muotoilu*/
     border-radius: 3px; 
 }
 
-
-
 nav li>div:hover {  /*visa valinta napit vaihtavat väriä kun käyttäjä vie hiiren niiden yli*/
     background-color: #a05c9d;
     opacity: 95%;
@@ -95,13 +100,24 @@ nav li>div:hover {  /*visa valinta napit vaihtavat väriä kun käyttäjä vie h
                 2px -2px 10px #fff;
 }
 
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:visited {
+    color: #fff;
+}
+
+
 footer { /* Footerin muotoilu alkaa */
     grid-column: 1/4;
     grid-row: 4/5;
 
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 10px;
 
     min-height: 50px; /* Väliaikainen arvo */
 }
@@ -140,8 +156,8 @@ h2 {
 
 #form div {
     border: 3px solid #369f39;
-    max-width: 100%;
-    /*display: flex;
+    /*max-width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: stretch;*/
 }
@@ -236,8 +252,16 @@ button {
 #resultButton {
     font-size: 1.5em;
 }
+.modal-header{
+    background-color: #369f39;
+    
+    display: flex;
+    font-size: 1.5em;
+    align-items: stretch;
+}
 
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 889px) {
     #container { 
         display: grid;
         grid-template-columns: 1fr 3fr ;
@@ -264,5 +288,39 @@ button {
         grid-row: 1/2;
         grid-column: 1/2;
     }
+    .fa-house-chimney, .fa-circle-info{ /* Home ja Info ikonit */
+        font-size: 40px;
+        margin-right: 25px;
+    }
+    nav li>div {
+        font-size: 1.25em;
+    }
+
+    footer {
+        font-size: 1.5em;
+    }
     
+}
+@media only screen and (max-width: 768px) {
+    /*kun alle 768px leveys piilotetaan valikko ja siitä tulee navbar*/
+    nav li>div {
+        font-size: 1em;
+    }
+
+    .näkymätön {
+        display: none;
+    }
+
+    .fullArticle {
+        grid-column: 1/3;
+    }
+
+    #mainHeader {
+        font-size: 2.5em;
+    } 
+
+    .fa-bars {
+        display: inline;
+    }
+
 }
