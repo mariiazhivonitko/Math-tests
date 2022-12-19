@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Älykäs Koulu - Matematiikka</title>
+    <title>Älykäs Koulu - Matematiikkavisa</title>
     <!--Bootstrap Code-->
    <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b8788be955.js" crossorigin="anonymous"></script> <!-- FontAwesome scripti -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="matikka.css">
 
     
 </head>
@@ -26,55 +26,55 @@
     -->
     <div id="container">
         <header>
-            <a><img src="assets/icons/OwlIcon.svg" alt=""></a>
+            <a><img src="../../assets/icons/OwlIcon.svg" alt=""></a>
             <h1>Alykäs koulu</h1>
-            <i class="fa-solid fa-house-chimney"></i>
-            <i class="fa-solid fa-circle-info"></i>
+            <a href="../../index.html"><i class="fa-solid fa-house-chimney"></i></a>
+            <a href="/pages/info/info.html"><i class="fa-solid fa-circle-info"></i></a>
         </header>
 
-        <nav>
+        <nav id="navbar" class="visible">
             
             <ul>
                 <li>
                     <div>
                         <i class="fa-regular fa-plus-minus"></i>
-                        <a>Matematiikka</a>
+                        <a href="../matikka/matikka.html">Matematiikka</a>
                     </div>
                 </li>
                 <li>
                     <div>
                         <i class="fa-regular fa-language"></i>
-                        <a>Englanti</a>
+                        <a href="../englanti/englanti.html">Englanti</a>
                     </div>
                 </li>
                 <li>
                     <div>
                         <i class="fa-regular fa-music"></i>
-                        <a>Musiikki</a>
+                        <a href="../musiikki/musiikki.html">Musiikki</a>
                     </div>
                 </li>
                 <li>
                     <div>
                         <i class="fa-regular fa-earth-europe"></i>
-                        <a>Maantieto</a>
+                        <a href="../maantieto/maantieto.html">Maantieto</a>
                     </div>
                 </li>
                 <li>
                     <div>
                         <i class="fa-regular fa-seedling"></i>
-                        <a>Kasvi</a>
+                        <a href="../kasvi/kasvi.html">Kasvi</a>
                     </div>
                 </li>
                 <li>
                     <div>
                         <i class="fa-regular fa-pen"></i>
-                        <a>Tavutus</a>
+                        <a href="../tavutus/tavutus.html">Tavutus</a>
                     </div>
                 </li>
                 <li>
                     <div>
                         <i class="fa-regular fa-book"></i>
-                        <a>Avaruus</a>
+                        <a href="../avaruus/avaruus.html">Avaruus</a>
                     </div>
                 </li>
             </ul>
@@ -84,7 +84,7 @@
             <h2>Matematiikka</h2>
             <div id="question1">
                 <h4>Kysymys 1/5</h4>
-                <img src="assets/tasks/flowers.svg" id="flower_img" alt="flowers">
+                <img src="../../assets/tasks/flowers.svg" id="flower_img" alt="flowers">
                 <div class="answer-box" id="answerBox1">
                     <div>
                         <label for="answer1">Vastaus</label>
@@ -102,7 +102,7 @@
             </div>
             <div id="question2">
                 <h4>Kysymys 2/5</h4>
-                <img src="assets/tasks/square.svg" id="square_img" alt="square">
+                <img src="../../assets/tasks/square.svg" id="square_img" alt="square">
                 <div class="answer-box" id="answerBox2">
                     <label>Vastaus</label>
                     <div>
@@ -128,7 +128,7 @@
             </div>
             <div id="question3">
                 <h4>Kysymys 3/5</h4>
-                <img src="assets/tasks/parking.svg" id="car_img" alt="parking">
+                <img src="../../assets/tasks/parking.svg" id="car_img" alt="parking">
                 <div class="answer-box" id="answerBox3">
                     <div>
                         <label for="answer3">Vastaus</label>
@@ -140,7 +140,7 @@
             </div>
             <div id="question4">
                 <h4>Kysymys 4/5</h4>
-                <img src="assets/tasks/tetris.svg" id="tetris_img" alt="tetris">
+                <img src="../../assets/tasks/tetris.svg" id="tetris_img" alt="tetris">
                 <div id="answerBox4" class="answer-box">
                     <label>Vastaus</label>
                     <div>
@@ -173,7 +173,7 @@
             </div>
             <div id="question5">
                 <h4>Kysymys 5/5</h4>
-                <img id="socks_img" src="assets/tasks/socks.png">
+                <img id="socks_img" src="../../assets/tasks/socks.png">
                 <div id="socks">
                     <div style="left: 4%; top: 30%; width: 15%; height: 15%;"  onclick="wrongAnswer5()"></div>
                     <div style="left: 33%; top: 52%; width: 15%; height: 15%;" onclick="rightAnswer5()"></div>
