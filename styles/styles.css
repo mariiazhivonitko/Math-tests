@@ -42,6 +42,10 @@ body #container header a {
 body #container header a :hover {
   color: #a05c9d;
 }
+body #container header i {
+  font-size: 50px;
+  margin-right: 55px;
+}
 body #container nav {
   grid-column: 1/2;
   grid-row: 2/4;
@@ -80,30 +84,20 @@ body #container nav ul li > div a {
   text-decoration: none;
   color: white;
 }
-
-footer { /* Tasainen padding headerin ja footerin välille */
-  background-color: #46c24a;
-  padding: 0px 2em;
+body #container nav ul li > div i {
+  font-family: "FontAwesome";
+  font-size: 35px;
 }
-
-footer { /* Footerin muotoilu alkaa */
+body #container footer {
   grid-column: 1/4;
   grid-row: 4/5;
+  background-color: #46c24a;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 10px;
-  min-height: 50px; /* Väliaikainen arvo */
-}
-
-.fa-solid, .fa-regular, .fa-light, .fa-thin { /* FontAwesome ikonit */
-  font-family: "FontAwesome";
-  font-size: 35px;
-}
-
-.fa-house-chimney, .fa-circle-info { /* Home ja Info ikonit */
-  font-size: 50px;
-  margin-right: 55px;
+  padding: 0px 2em;
+  min-height: 50px;
 }
 
 header img {

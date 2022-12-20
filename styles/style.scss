@@ -51,6 +51,10 @@ body {
                 }
 
             }
+            i{
+                font-size: 50px;
+                margin-right: 55px;
+            }
 
         }
         nav {
@@ -91,6 +95,10 @@ body {
                             text-decoration: none;
                             color: $neutralColor;
                         }
+                        i{
+                            font-family: 'FontAwesome';
+                            font-size: 35px;
+                        }
                         
                         
                             
@@ -99,38 +107,23 @@ body {
                 }
             }
         }
+        footer {
+            grid-column: 1/4;
+            grid-row: 4/5;
+            background-color: $mediumColor;
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            padding: 10px;
+            padding: 0px 2em;
+            min-height: 50px;
+        }
     }  
 }
 
 
-footer { /* Tasainen padding headerin ja footerin välille */
-    background-color: #46c24a;
-    padding: 0px 2em;
-}
 
 
-footer { /* Footerin muotoilu alkaa */
-    grid-column: 1/4;
-    grid-row: 4/5;
-
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    padding: 10px;
-
-    min-height: 50px; /* Väliaikainen arvo */
-}
-
-
-.fa-solid, .fa-regular, .fa-light, .fa-thin{ /* FontAwesome ikonit */
-    font-family: 'FontAwesome';
-    font-size: 35px;
-}
-
-.fa-house-chimney, .fa-circle-info{ /* Home ja Info ikonit */
-    font-size: 50px;
-    margin-right: 55px;
-}
 
 header img {
     height: 100px;
