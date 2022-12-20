@@ -141,68 +141,59 @@ body #container #form div h4 {
   background-color: #369f39;
   padding: 5px;
 }
-
-input {
-  width: 20%;
-}
-
-button {
+body #container #form div button {
   background-color: #369f39;
-  color: #fff;
+  color: white;
   margin: 15px;
   border: none;
+  border-radius: 5px;
 }
-
-#form img {
+body #container #form img {
   max-width: 100%;
 }
-
-#question5 {
+body #container #form #question5 {
   position: relative;
 }
-
-#question5 img {
+body #container #form #question5 img {
   width: 100%;
   height: auto;
 }
-
-#form #socks {
+body #container #form #question5 #socks {
   border: none;
 }
-
-#socks div {
+body #container #form #question5 #socks div {
   position: absolute;
   border: none;
   border-radius: 50%;
 }
-
-#question5 div:hover {
+body #container #form #question5 #socks :hover {
   background-color: rgba(0, 0, 0, 0.25);
 }
-
-#result img {
-  max-width: 100%;
-}
-
-#result {
+body #container #form #result {
   display: flex;
   flex-direction: column;
 }
-
-#result div {
+body #container #form #result div {
   border: none;
   align-items: center;
 }
-
-#resultButton {
+body #container #form #result div img {
+  max-width: 100%;
+}
+body #container #form #result div #resultButton {
   font-size: 1.5em;
 }
-
-.modal-header {
-  background-color: #369f39;
+body #container #form #result div .modal-header {
+  background-color: white;
+  color: #369f39;
   display: flex;
-  font-size: 1.5em;
-  align-items: stretch;
+}
+body #container #form #result div .modal-header h1 {
+  text-shadow: none;
+  font-weight: bold;
+}
+body #container #form #result div .modal-header #resultBonus {
+  font-size: 1em;
 }
 
 @media screen and (max-width: 889px) {
