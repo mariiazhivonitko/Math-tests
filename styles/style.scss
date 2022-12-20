@@ -8,6 +8,9 @@ $mediumColor :#46c24a;
 $lightColor: #6bd06e;
 $conrastColor: #a05c9d;
 $neutralColor: white;
+$iconSize: 1.5em;
+$iconSizeHeader: 2em;
+$logosize: 5em;
 
 @mixin theme($fontcolor:$neutralColor, $fontfamily:'Patrick Hand') {
     color: $fontcolor;
@@ -34,7 +37,7 @@ body {
             grid-row: 1/2;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 5px;
             position: sticky;
             min-height: 100px;
             background-color: $mediumColor;
@@ -42,18 +45,21 @@ body {
             h1{
                 width: 90%;
                 text-align: left;
-                font-size: 4em;
+                font-size: 3em;
             }
             a{
                 color: $neutralColor;
                 :hover{
                     color: $conrastColor;
                 }
-
+                i{
+                    font-size: $iconSizeHeader;
+                    margin: 10px;
+                }
             }
-            i{
-                font-size: 50px;
-                margin-right: 55px;
+            
+            img {
+                height: $logosize;
             }
 
         }
@@ -97,12 +103,8 @@ body {
                         }
                         i{
                             font-family: 'FontAwesome';
-                            font-size: 35px;
-                        }
-                        
-                        
-                            
-                        
+                            font-size: $iconSize;
+                        }    
                     }
                 }
             }
@@ -114,10 +116,52 @@ body {
             display: flex;
             flex-direction: column;
             align-items:flex-start;
-            padding: 10px;
-            padding: 0px 2em;
-            min-height: 50px;
+            padding: 1em;   
         }
+        #form {
+            grid-column: 2/4;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr 1fr 1fr auto;
+            gap: 20px;
+            padding: 10px;
+            h2 {
+                grid-column: 1/3;
+                grid-row: 1/2;
+                background-color: $mainColor;
+                text-align: center;                
+            }
+            div{
+                border: 3px solid $mediumColor;
+                .answer-box {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    border: none;
+                    div{
+                        border: none;
+                        margin: 5px;
+                        label {
+                            color: #369f39;
+                            padding: 5px;
+                            text-shadow: none;
+                            font-weight: bold;
+                        }
+                        input {
+                            width:20%;
+                        }
+                    }
+                    
+                }
+                h4 {
+                    background-color: #369f39;
+                    padding: 5px;
+                }
+            }
+           
+        }
+        
     }  
 }
 
@@ -125,70 +169,11 @@ body {
 
 
 
-header img {
-    height: 100px;
-}
-
-#form {
-    grid-column: 2/4;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr 1fr auto;
-    gap: 20px;
-    padding: 10px;
-}
-
-h2 {
-    grid-column: 1/3;
-    grid-row: 1/2;
-    background-color: #369f39;
-    text-align: center;
-    
-}
-
-#form div {
-    border: 3px solid #369f39;
-    /*max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;*/
-}
-
-#form .answer-box {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    border: none;
-}
-
-#form .answer-box div {
-    border: none;
-    margin: 5px;
-}
-
-#form div #question5 {
-    grid-column: 1/3;
-    grid-row: 5/6;
-    background-color: #a05c9d;
-    display: flex;
-    justify-content: space-around;
-}
-
-#form h4 {
-    background-color: #369f39;
-    padding: 5px;
-    
-}
-
-label {
-    color: #369f39;
-    padding: 5px;
-    text-shadow: none;
-    font-weight: bold;
 
 
-}
+
+
+
 
 input {
     width:20%;
@@ -263,6 +248,9 @@ button {
         grid-column: 1/3;
         grid-row: 1/2;
     }
+    i{
+        display: none;
+    }
     nav {
         grid-column: 1/2;
         grid-row: 2/4;
@@ -316,3 +304,10 @@ button {
     }
 
 }
+/*#question5 {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    background-color: #a05c9d;
+    display: flex;
+    justify-content: space-around;
+}*/
