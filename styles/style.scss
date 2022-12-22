@@ -134,6 +134,7 @@ body {
             }
             div{
                 border: 3px solid $mediumColor;
+                
                 .answer-box {
                     display: flex;
                     flex-wrap: wrap;
@@ -154,10 +155,10 @@ body {
                         }
                     }    
                 }
-                >h4 {
+                h4 {
                     background-color: $mainColor;
                     padding: 5px;
-                }
+                } 
                 button {
                     background-color: $mainColor;
                     color: $neutralColor;
