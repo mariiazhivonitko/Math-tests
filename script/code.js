@@ -61,7 +61,7 @@ function checkAnswer1() {
     let rightAnswer1 = 11;
     // Show the solution, when the button was pressed. 
     // Hide answer-box
-    image1.src = "../../assets/answers/flowers_answer.svg";
+    image1.src = "assets/answers/flowers_answer.svg";
     answerBox1.style.display = "none";
 
     if(answerInput1 == rightAnswer1){
@@ -87,7 +87,7 @@ function checkAnswer2(){
 
     // Show the solution, when the button was pressed. 
     // Hide answer-box
-    image2.src = "../../assets/answers/square_answer.svg";
+    image2.src = "assets/answers/square_answer.svg";
     answerBox2.style.display = "none";
 
     if (answerRadioButton2 == rightAnswer2){
@@ -109,7 +109,7 @@ function checkAnswer3(){
     
     // Show the solution, when the button was pressed. 
     // Hide answer-box
-    image3.src = "../../assets/answers/car_answer.svg";
+    image3.src = "assets/answers/car_answer.svg";
     answerBox3.style.display = "none";
 
     if(answerInput3 == rightAnswer3){
@@ -132,7 +132,7 @@ function checkAnswer4(){
 
     // Show the solution, when the button was pressed. 
     // Hide answer-box
-    image4.src = "../../assets/answers/tetris_answer.svg";
+    image4.src = "assets/answers/tetris_answer.svg";
     answerBox4.style.display = "none";
 
     if (answerRadioButton4 == rightAnswer4){
@@ -149,7 +149,7 @@ function rightAnswer5() {
     //show picture with an answer explanation
     let question5 =document.getElementById("question5");
     let image5 = document.getElementById("socks_img");
-    image5.src = "../../assets/answers/socks_answer.svg";
+    image5.src = "assets/answers/socks_answer.svg";
 
     //Hide divs to choose an answer.
     let socksDiv = document.getElementById("socks");
@@ -163,7 +163,7 @@ function wrongAnswer5(){
     //show picture with an answer explanation
     let question5 = document.getElementById("question5");
     let image5 = document.getElementById("socks_img");
-    image5.src = "../../assets/answers/socks_answer.svg";
+    image5.src = "assets/answers/socks_answer.svg";
 
     //Hide divs to choose an answer.
     let socksDiv = document.getElementById("socks");
@@ -188,7 +188,7 @@ function visaResult(resultPisteet){
     let resultDiv = document.getElementById("resultBonus");
     let comment = document.createElement("p");
     let button = document.getElementById("resultButton");
-    let starPicture = "<img  width='80px'  src='/assets/answers/Star.png'>"
+    let starPicture = "<img  width='80px'  src='assets/answers/Star.png'>"
     let prize = document.createElement("div");
     
     //Hide vastaus button and picture
